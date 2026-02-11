@@ -36,10 +36,3 @@ Creating presentations is often a tedious balance of writing content and hunting
    PEXELS_API_KEY=your_key_here
 
    python generator.py
-
-### Project Structure
-├── generator.py         # Main logic for API calls and slide creation
-├── requirements.txt      # List of dependencies
-├── .env.example          # Example environment file
-└── output/               # Folder where generated PPTs are saved
-
