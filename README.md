@@ -1,43 +1,45 @@
-# PPTGenerator
-An automated tool that transforms a simple topic into a professional, visually engaging PowerPoint presentation in seconds. By leveraging Google Gemini 3 Flash for intelligent content structuring and the Pexels API for high-quality visual context, this project eliminates the "blank slide" problem for students, educators, and professionals.
+# 📊 AI PowerPoint Generator 
 
-✨ Key Features
-Intelligent Content Generation: Uses Gemini 3 Flash to research and draft slide outlines, speaker notes, and concise bullet points.
+An automated presentation engine that uses **Google Gemini 3 Flash** to write content and the **Pexels API** to source high-quality visuals. Turn a single prompt into a ready-to-present `.pptx` file in seconds.
 
-Automated Image Sourcing: Dynamically generates search queries based on slide context to fetch relevant, royalty-free high-resolution images via the Pexels API.
+---
 
-Ready-to-Use Export: Outputs a fully formatted .pptx file compatible with Microsoft PowerPoint, Google Slides, and LibreOffice.
+## 🌟 Overview
 
-Optimized Performance: Built with the Flash model to ensure low-latency generation without sacrificing the quality of the narrative.
+Creating presentations is often a tedious balance of writing content and hunting for relevant imagery. This tool automates the entire workflow:
+1.  **Content Synthesis:** Gemini 3 Flash generates a logical slide-by-slide outline, bullet points, and speaker notes.
+2.  **Visual Matching:** The system extracts keywords from the content to query the Pexels API for contextually relevant background images.
+3.  **File Assembly:** Everything is packaged into a clean, professional `.pptx` format.
 
-🛠️ Tech Stack
-LLM: Google Gemini 3 Flash (Content & Logic)
+## 🛠️ Built With
 
-Media: Pexels API (Stock Images)
+* **[Google Gemini 3 Flash](https://aistudio.google.com/)** - High-speed, multimodal LLM for content generation.
+* **[Pexels API](https://www.pexels.com/api/)** - Sourcing royalty-free, high-definition photography.
+* **[python-pptx](https://python-pptx.readthedocs.io/)** - The engine used to programmatically create and style slides.
+* **Python 3.10+**
 
-Language: Python 3.10+
+## 🚀 Getting Started
 
-Libraries: python-pptx (PPT construction), google-generativeai (AI integration), requests (API handling)
+### Prerequisites
+* A Google AI Studio API Key.
+* A Pexels Developer API Key.
 
-📦 Installation & Setup
-Clone the repository:
+### Installation
+1. Clone the repo:
+   ```bash
+   git clone [https://github.com/yourusername/repo-name.git](https://github.com/yourusername/repo-name.git)
+   cd repo-name
 
-Bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
-Install dependencies:
+   pip install -r requirements.txt
 
-Bash
-pip install -r requirements.txt
-Configure API Keys: Create a .env file in the root directory and add your credentials:
+   GEMINI_API_KEY=your_key_here
+   PEXELS_API_KEY=your_key_here
 
-Code snippet
-GEMINI_API_KEY=your_gemini_api_key
-PEXELS_API_KEY=your_pexels_api_key
-🖥️ Usage
-Run the main script and enter your topic when prompted:
+   python generator.py
 
-Bash
-python main.py --topic "The Future of Quantum Computing" --slides 7
-🤝 Contributing
-Contributions are welcome! Whether it's adding new slide templates, improving the prompt engineering, or supporting more image providers, feel free to open an issue or submit a PR.
+### Project Structure
+├── generator.py         # Main logic for API calls and slide creation
+├── requirements.txt      # List of dependencies
+├── .env.example          # Example environment file
+└── output/               # Folder where generated PPTs are saved
+
